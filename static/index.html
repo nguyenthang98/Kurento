@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<video id="videoInput" autoplay width="500px"></video>
+	<video id="videoOutput" autoplay width="500px"></video>
+	
+	<div style="display: block;">
+		<button id="start" onclick="start()">Start</button>
+		<button id="stop" onclick="stop()">Stop</button>
+	</div>
+	
+	<!-- dependencies -->
+	<script src="./javascripts-dependencies/jquery.min.js"></script>
+	<script src="./javascripts-dependencies/adapter.js"></script>
+	<script src="./javascripts-dependencies/kurento-utils/kurento-utils.js"></script>
+	<script src="socket.io/socket.io.js"></script>
+	<!-- main app files -->
+	<script src="./index.js"></script>
+</body>
+</html>
