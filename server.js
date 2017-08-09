@@ -29,8 +29,8 @@ var sessions = [];
 var candidateQueue = [];
 var kurentoClient = null;
 
-var server = https.Server(options,app).listen(8443,function () {
-	console.log('app listen on port 8443');
+var server = https.Server(options,app).listen(8433,function () {
+	console.log('app listen on port 8433');
 })
 
 var io = require('socket.io')(server);
@@ -100,7 +100,7 @@ function getKurentoClient (callback) {
 		return callback(null,kurentoClient);
 	}
 
-	kurento("ws://localhost:8888/kurento",function (error,_kurentoClient) {
+	kurento("ws://ubuntu-ec2.ddns.net:8888/kurento",function (error,_kurentoClient) {
 		if(error){
 			return callback('could not find media from : '+ sessionId+ '. Exiting with error: '+error);
 		}
